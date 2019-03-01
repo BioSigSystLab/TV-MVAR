@@ -58,7 +58,7 @@ for mT=1:M
         set(gca,'fontsize',12,'fontweight','bold')
     end
 end
-saveas(gcf,sprintf('../results/%sCOH.png',meth))
+saveas(gcf,sprintf('results/%sCOH.png',meth))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plot PCOH
@@ -96,7 +96,7 @@ for mT=1:M
         set(gca,'fontsize',12,'fontweight','bold')
     end
 end
-saveas(gcf,sprintf('../results/%sPCOH.png',meth))
+saveas(gcf,sprintf('results/%sPCOH.png',meth))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plot DC
@@ -126,7 +126,7 @@ for mT=1:M
         set(gca,'fontsize',12,'fontweight','bold')
     end
 end
-saveas(gcf,sprintf('../results/%sDC.png',meth))
+saveas(gcf,sprintf('results/%sDC.png',meth))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plot gPDC
@@ -156,4 +156,4 @@ for mT=1:M
         set(gca,'fontsize',12,'fontweight','bold')
     end
 end    
-saveas(gcf,sprintf('../results/%sgPDC.png',meth))
+saveas(gcf,sprintf('results/%sgPDC.png',meth))
