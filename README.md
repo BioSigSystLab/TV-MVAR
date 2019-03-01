@@ -98,7 +98,7 @@
 ```
 #### Results
 
->Once Main.m is finished running the following figures are saved:
+>Once Main.m is finished running the following figures are saved in the current folder:
 
 ```
 KFCOH.png:       TV Coherence from one TV-MVAR realization estimated using the conventional KF 
