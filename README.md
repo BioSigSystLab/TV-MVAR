@@ -143,7 +143,40 @@ ________________________________________________________________________________
 
 ## Building MEX files using your machine
 
->Mex files in combination with parallel computing decrease significantly the runtime of the GA optimization framework. The scripts that can be compiled to mex files through matlab coder are: MVAR_KF.m, MVAR_MKFA.m and MVAR_MKFA2.m. 
+>Mex files in combination with parallel computing decrease significantly the runtime of the GA optimization framework. The scripts that can be compiled to mex files through matlab coder are: MVAR_KF.m, MVAR_MKFA.m and MVAR_MKFA2.m. To create mex files follow the steps depicted in the images:
+
+![Step 1](code/mexhowto/Image1.png)
+
+![Step 2](code/mexhowto/Image2.png)
+
+![Step 3](code/mexhowto/Image3.png)
+
+![Step 4](code/mexhowto/Image4.png)
+
+![Step 5](code/mexhowto/Image5.png)
+
+![Step 6](code/mexhowto/Image6.png)
+
+![Step 7](code/mexhowto/Image7.png)
+
+![Step 8](code/mexhowto/Image8.png)
+
+![Step 9](code/mexhowto/Image9.png)
+
+![Step 10](code/mexhowto/Image10.png)
+
+![Step 11](code/mexhowto/Image11.png)
+
+![Step 12](code/mexhowto/Image12.png)
+
+![Step 13](code/mexhowto/Image13.png)
+
+![Step 14](code/mexhowto/Image14.png)
+
+![Step 15](code/mexhowto/Image15.png)
+
+![Step 16](code/mexhowto/Image16.png)
+
 
 >For MVAR_KF the inputs are of type:
 X:      double 1xInf
