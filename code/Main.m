@@ -83,7 +83,7 @@ resultsMKFA2=simulate_MVAR_MKFA2(XMKFA2,Y,param);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plot the real and estimated TV-MVAR measures
 if(param.measflag==1)
-    load('data/TVcoef.mat')
+    load('TVcoef.mat')
     meth={'real','KF','MKFA','MKFA2'};
     %Estimate the real TV-MVAR measures
     real_MVARmeasures=estimate_MVARmeasures(coefcell(param.ignore:end),S,param.nfft,param.fs,param.M,preal,param.hetflag);
