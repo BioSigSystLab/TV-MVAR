@@ -7,7 +7,7 @@
 % The Software is provided "as is", without warranty of any kind.
 %---------------------------------------------------------------------------------------------------------------------
 
-function Main()
+close all;clear all;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,7 +187,7 @@ T = table(method,MSEc)
 
 
 
-save('results/RES.mat')
+save('RES.mat')
 
 
 
