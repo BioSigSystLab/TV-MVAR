@@ -20,7 +20,7 @@ function [Y,S,e]=createsimulationset(hetflag)
 
 fprintf('\n--------- Creating Simulation... ')
 tic;
-load('../data/TVcoef.mat')
+load('data/TVcoef.mat')
 M=3;
 p=2;
 N=1000;
