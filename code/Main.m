@@ -187,7 +187,7 @@ T = table(method,MSEc)
 
 
 
-save('../results/RES.mat')
+save('results/RES.mat')
 
 
 
