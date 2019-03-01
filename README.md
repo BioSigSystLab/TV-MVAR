@@ -23,11 +23,9 @@
 │        MVAR_measures.m
 │        plot_MVARmeasures.m
 │        colorcet.m
-│
-│    └── mexhowto
-│
-├── data
-     └── TVcoef.mat
+│        TVcoef.mat
+
+
 
 ```
 ```
@@ -94,8 +92,6 @@
   ├── colorcet.m:               Function by Peter Kovesi for perceptually uniform color maps
   │
   ├── mexhowto:                 Folder with images related to building mex files
-  
-- data contains:
   │
   ├── TVcoef.mat:               Mat file necessary for running the simulations. It contains the true TV-MVAR coefficients
 
