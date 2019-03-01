@@ -1,5 +1,6 @@
-Time Varying Multivariate Autoregressive (TV-MVAR) modeling [1]
-Structure of the MatLab ToolBox
+# Time Varying Multivariate Autoregressive (TV-MVAR) modeling  [1]
+## Structure of the MatLab ToolBox
+```
 / [root]
 ├── code
 │   └── [matlab scripts]
@@ -28,6 +29,8 @@ Structure of the MatLab ToolBox
 ├── data
      └── TVcoef.mat
 
+```
+```
 - code contains the following:
   │
   ├── Main.m:                   The main function. A 3 dimensional TV-MVAR realization, driven by homoskedastic and heteroskedastic noise,   
@@ -91,14 +94,17 @@ Structure of the MatLab ToolBox
   ├── colorcet.m:               Function by Peter Kovesi for perceptually uniform color maps
   │
   ├── mexhowto:                 Folder with images related to building mex files
-
+  
 - data contains:
   │
   ├── TVcoef.mat:               Mat file necessary for running the simulations. It contains the true TV-MVAR coefficients
 
-Results
-Once Main.m is finished running the following figures are saved:
+```
+#### Results
 
+>Once Main.m is finished running the following figures are saved:
+
+```
 KFCOH.png:       TV Coherence from one TV-MVAR realization estimated using the conventional KF 
 
 KFPCOH.png:      TV Partial Coherence from one TV-MVAR realization estimated using the conventional KF 
@@ -123,21 +129,43 @@ MKFA2DC.png:     TV Directed Coherence  from one TV-MVAR realization estimated u
 
 MKFA2gPDC.png:   TV Generalized Partial Directed Coherence  from one TV-MVAR realization estimated using the improved version of the 
                  proposed KF (MKFA2)
+                
+```
+                 
+>The output file contains the text printed in the command window; each step as well as the total computation time. At the end, 2 tables are also included. The first contains the Normalized Mean Squared Error (NMSE) between true and predicted TV-MVAR measures and the second one the Mean Squared Error (MSE) between true and predicted TV-MVAR coefficients using all 3 methods (i.e. the conventional KF, the proposed KF and the improved version of the proposed KF) 
 
-The output file contains the text printed in the command window; each step as well as the total computation time. At the end, 2 tables are also included. The first contains the Normalized Mean Squared Error (NMSE) between true and predicted TV-MVAR measures and the second one the Mean Squared Error (MSE) between true and predicted TV-MVAR coefficients using all 3 methods (i.e. the conventional KF, the proposed KF and the improved version of the proposed KF)
+>In the reproducible run the TV-MVAR process is driven by heteroskedastic noise 
 
-In the reproducible run the TV-MVAR process is driven by heteroskedastic noise
+>All the results are saved to the file: RES.mat
 
-All the results are saved to the file: RES.mat
 
-Building MEX files using your machine
-Mex files in combination with parallel computing decrease significantly the runtime of the GA optimization framework. The scripts that can be compiled to mex files through matlab coder are: MVAR_KF.m, MVAR_MKFA.m and MVAR_MKFA2.m.
+____________________________________________________________________________________________________________
 
-For MVAR_KF the inputs are of type: X: double 1xInf Y: double 3x:1000 (note that you can change this based on the size of your data) metric: double 1x1 ignore: double 1x1
+## Building MEX files using your machine
 
-For MVAR_MKFA the inputs are of type: X: double 1xInf Y: double 3x:1000 (note that you can change this based on the size of your data) metric: double 1x1 ignore: double 1x1
+>Mex files in combination with parallel computing decrease significantly the runtime of the GA optimization framework. The scripts that can be compiled to mex files through matlab coder are: MVAR_KF.m, MVAR_MKFA.m and MVAR_MKFA2.m. 
 
-For MVAR_MKFA2 the inputs are of type: X: double 1xInf Y: double 3x:1000 (note that you can change this based on the size of your data) metric: double 1x1 ignore: double 1x1 pmax: double 1x1
+>For MVAR_KF the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
 
-References
-[1] K. Kostoglou, A.D. Robertson, B. J. MacIntosh, G. D. Mitsis, "A novel framework for estimating time-varying multivariate autoregressive models and application to cardiovascular responses to acute exercise", Accepted, Transactions on Biomedical Engineering (TBME)
+>For MVAR_MKFA the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
+
+>For MVAR_MKFA2 the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
+pmax:   double 1x1
+
+____________________________________________________________________________________________________________
+
+## References 
+
+> [1] K. Kostoglou, A.D. Robertson, B. J. MacIntosh, G. D. Mitsis, "A novel framework for estimating time-varying multivariate autoregressive models and application to cardiovascular responses to acute exercise", Accepted, Transactions on Biomedical Engineering (TBME)
