@@ -28,7 +28,7 @@ pmax=param.pmax;
 
 fprintf('\n\n--------Initiating GA MVAR model optimization based on the proposed KF --------\n\n') 
 h = @(X) MVAR_MKFA2(X,Y,metric,ignore,pmax);                              
-%In case you want to use mex files for faster runtime type instead: h = @(X) MVAR_MKFA2_mex(X,Y,metric,ignore);
+%In case you want to use mex files for faster runtime type instead: h = @(X) MVAR_MKFA2_mex(X,Y,metric,ignore,pmax);
 nvars=2+2*M*M*pmax;                            %Number of hyperparameters optimized by the GA (p,R1, R2 -> vectors of size M*M*p, P0)
 LB=[1 zeros(1,M*M*pmax)  zeros(1,M*M*pmax) 0];                             %Lower bound for the hyperparameters values 
 UB=[pmax inf*ones(1,M*M*pmax) 1*ones(1,M*M*pmax) inf ];                    %Upper bound for the hyperparameters values
