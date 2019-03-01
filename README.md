@@ -157,6 +157,25 @@ ________________________________________________________________________________
 
 ![Step 6](code/mexhowto/Image6.png)
 
+>For MVAR_KF the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
+
+>For MVAR_MKFA the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
+
+>For MVAR_MKFA2 the inputs are of type:
+X:      double 1xInf
+Y:      double 3x:1000 (note that you can change this based on the size of your data)
+metric: double 1x1
+ignore: double 1x1
+pmax:   double 1x1
+
 ![Step 7](code/mexhowto/Image7.png)
 
 ![Step 8](code/mexhowto/Image8.png)
@@ -177,25 +196,8 @@ ________________________________________________________________________________
 
 ![Step 16](code/mexhowto/Image16.png)
 
+>The mex file is stored in the current folder. To call for example MVAR_KF as mex, instead of MVAR_KF(....) type MVAR_KF_mex(.....). More details inside the code.  
 
->For MVAR_KF the inputs are of type:
-X:      double 1xInf
-Y:      double 3x:1000 (note that you can change this based on the size of your data)
-metric: double 1x1
-ignore: double 1x1
-
->For MVAR_MKFA the inputs are of type:
-X:      double 1xInf
-Y:      double 3x:1000 (note that you can change this based on the size of your data)
-metric: double 1x1
-ignore: double 1x1
-
->For MVAR_MKFA2 the inputs are of type:
-X:      double 1xInf
-Y:      double 3x:1000 (note that you can change this based on the size of your data)
-metric: double 1x1
-ignore: double 1x1
-pmax:   double 1x1
 
 ____________________________________________________________________________________________________________
 
