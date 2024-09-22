@@ -24,12 +24,15 @@ function results=estimate_MVARmeasures(th,S,nfft,fs,M,p,hetflag)
 
 %Estimate MVAR measures at each time point
 for k=1:length(th)
+    if(isempty(th{k})==0)
+
     if(hetflag==1)
        %if hetflag==1 then S is TV (cell of length N - as estimated by the GARCH models) and therefore at each time point we need to compute the MVAR measures based on the obtained TV MVAR coefficients and the estimated GARCH covariance (S) of the model residuals 
        res{k}=MVAR_measures(th{k},S{k},nfft,fs,M,p);
     else
        %else S is just an MxM matrix
        res{k}=MVAR_measures(th{k},S,nfft,fs,M,p);
+    end
     end
 end
 
