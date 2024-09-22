@@ -26,30 +26,33 @@ function results=estimate_MVARmeasures(th,S,nfft,fs,M,p,hetflag)
 for k=1:length(th)
     if(isempty(th{k})==0)
 
-    if(hetflag==1)
-       %if hetflag==1 then S is TV (cell of length N - as estimated by the GARCH models) and therefore at each time point we need to compute the MVAR measures based on the obtained TV MVAR coefficients and the estimated GARCH covariance (S) of the model residuals 
-       res{k}=MVAR_measures(th{k},S{k},nfft,fs,M,p);
-    else
-       %else S is just an MxM matrix
-       res{k}=MVAR_measures(th{k},S,nfft,fs,M,p);
-    end
+        if(hetflag==1)
+           %if hetflag==1 then S is TV (cell of length N - as estimated by the GARCH models) and therefore at each time point we need to compute the MVAR measures based on the obtained TV MVAR coefficients and the estimated GARCH covariance (S) of the model residuals 
+           res{k}=MVAR_measures(th{k},S{k},nfft,fs,M,p);
+        else
+           %else S is just an MxM matrix
+           res{k}=MVAR_measures(th{k},S,nfft,fs,M,p);
+        end
     end
 end
 
 %The TV-MVAR measures are saved on cells with indexes {mT,mD}, where mT is the target time-series and mD is the driver time-series.
 %Each column of a cell represents time. E.g. results.PCOH{1,2}(:,10) is the PCOH from time-series 2 to time-series 1 at time point 10. 
 for k=1:length(th)
-     for mT=1:M        
-        for mD=1:M
-            results.SP{mT,mD}(:,k)=res{k}.S{mT,mD};
-            results.P{mT,mD}(:,k)=res{k}.P{mT,mD};
-            results.COH{mT,mD}(:,k)=res{k}.COH{mT,mD};
-            results.PCOH{mT,mD}(:,k)=res{k}.PCOH{mT,mD};            
-            results.DC{mT,mD}(:,k)=res{k}.DC{mT,mD};
-            results.gPDC{mT,mD}(:,k)=res{k}.gPDC{mT,mD};
-            results.f=res{k}.f;
-        end
-     end
+    if(isempty(th{k})==0)
+
+         for mT=1:M        
+            for mD=1:M
+                results.SP{mT,mD}(:,k)=res{k}.S{mT,mD};
+                results.P{mT,mD}(:,k)=res{k}.P{mT,mD};
+                results.COH{mT,mD}(:,k)=res{k}.COH{mT,mD};
+                results.PCOH{mT,mD}(:,k)=res{k}.PCOH{mT,mD};            
+                results.DC{mT,mD}(:,k)=res{k}.DC{mT,mD};
+                results.gPDC{mT,mD}(:,k)=res{k}.gPDC{mT,mD};
+                results.f=res{k}.f;
+            end
+         end
+    end
 end
 results.fs=fs;
 results.M=M;
