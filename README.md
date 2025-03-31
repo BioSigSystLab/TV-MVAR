@@ -134,7 +134,7 @@ MKFA2gPDC.png:   TV Generalized Partial Directed Coherence  from one TV-MVAR rea
 
 >All the results are saved to the file: RES.mat
 
-
+ATTENTION: If the data contains very slow drifts, it is advisable to apply a high-pass filter; otherwise, the model may primarily capture very low-frequency dynamics.
 ____________________________________________________________________________________________________________
 
 ## Building MEX files using your machine
