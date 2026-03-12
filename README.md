@@ -199,4 +199,4 @@ ________________________________________________________________________________
 
 ## References 
 
-> [1] K. Kostoglou, A.D. Robertson, B. J. MacIntosh, G. D. Mitsis, "A novel framework for estimating time-varying multivariate autoregressive models and application to cardiovascular responses to acute exercise", Accepted, Transactions on Biomedical Engineering (TBME)
+> [1] Kostoglou, K., Robertson, A. D., MacIntosh, B. J., & Mitsis, G. D. (2019). A novel framework for estimating time-varying multivariate autoregressive models and application to cardiovascular responses to acute exercise. IEEE Transactions on Biomedical Engineering, 66(11), 3257-3266.
